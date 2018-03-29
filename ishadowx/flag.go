@@ -9,8 +9,8 @@ import (
 
 const (
 	help = `%s usage:
-%s [ -h | -H | --help ]
-%s [path to store file]
+%s [ -h | -H | --help ]  how to use it
+%s [path to store file]  defualt path .
 `
 )
 
