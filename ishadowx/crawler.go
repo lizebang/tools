@@ -3,7 +3,6 @@ package main
 import (
 	"strconv"
 	"strings"
-	"time"
 
 	"github.com/gocolly/colly"
 )
@@ -14,25 +13,22 @@ const (
 
 type crawler struct {
 	collector *colly.Collector
-	configs   []Config
-	timeout   time.Duration
+	configs   []config
 }
 
-func newCrawler(timeout time.Duration) *crawler {
+func newCrawler() *crawler {
 	return &crawler{
 		collector: colly.NewCollector(),
-		configs:   make([]Config, 0),
-		timeout:   timeout,
+		configs:   make([]config, 0),
 	}
 }
 
-func getConfigs(c *crawler) []Config {
+func getConfigs(c *crawler) []config {
 	c.collector.OnHTML("div.hover-text", c.parse)
 	err := c.collector.Visit(ishadowxSite)
 	if err != nil {
 		panic(err)
 	}
-	time.Sleep(c.timeout)
 	return c.configs
 }
 
@@ -41,7 +37,7 @@ func (c *crawler) parse(e *colly.HTMLElement) {
 	if err != nil {
 		panic(err)
 	}
-	c.configs = append(c.configs, Config{
+	c.configs = append(c.configs, config{
 		Enable:     true,
 		Password:   strings.Replace(strings.Replace(e.DOM.Find("h4").Eq(2).Text()[9:], " ", "", -1), "\n", "", -1),
 		Method:     strings.Replace(strings.Replace(e.DOM.Find("h4").Eq(3).Text()[7:], " ", "", -1), "\n", "", -1),

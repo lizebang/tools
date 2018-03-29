@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -9,8 +8,8 @@ import (
 
 const (
 	help = `%s usage:
-%s [ -h | -H | --help ]  how to use it
-%s [path to store file]  defualt path .
+%s [ -h | -H | --help | --Help ]  how to use %s
+%s [ The path to save the file ]  defualt path is "."
 `
 )
 
@@ -22,23 +21,24 @@ func getPath() string {
 			panic(err)
 		}
 		return path
-	} else if len(args) == 2 {
-		if isHelp(args[1]) {
-			fmt.Fprintf(os.Stdout, help, args[0], args[0], args[0])
-			os.Exit(1)
-		}
-		path, err := filepath.Abs(args[1])
-		if err != nil {
-			panic(err)
-		}
-		os.MkdirAll(path, 0755)
-		return path
+	} else if len(args) > 2 {
+		fmt.Fprintf(os.Stderr, "Error: too many arguments\n"+help, args[0], args[0], args[0], args[0])
+		os.Exit(1)
 	}
-	panic(errors.New("too many arguments"))
+	if isHelp(args[1]) {
+		fmt.Fprintf(os.Stderr, help, args[0], args[0], args[0], args[0])
+		os.Exit(1)
+	}
+	path, err := filepath.Abs(args[1])
+	if err != nil {
+		panic(err)
+	}
+	os.MkdirAll(path, 0755)
+	return path
 }
 
 func isHelp(s string) bool {
-	if s == "-h" || s == "-H" || s == "--help" {
+	if s == "-h" || s == "-H" || s == "--help" || s == "--Help" {
 		return true
 	}
 	return false

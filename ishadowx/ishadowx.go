@@ -3,13 +3,12 @@ package main
 import (
 	"encoding/json"
 	"os"
-	"time"
 )
 
 func main() {
 	path := getPath()
 	cc := newCompletedConfig()
-	cc.Configs = getConfigs(newCrawler(3 * time.Second))
+	cc.Configs = getConfigs(newCrawler())
 	b, err := json.Marshal(cc)
 	if err != nil {
 		panic(err)

@@ -14,7 +14,7 @@ type completedConfig struct {
 	ProxyAuthPass   interface{} `json:"proxyAuthPass"`
 	IsDefault       bool        `json:"isDefault"`
 	PacURL          interface{} `json:"pacUrl"`
-	Configs         []Config    `json:"configs"`
+	Configs         []config    `json:"configs"`
 	ProxyPort       int         `json:"proxyPort"`
 	RandomAlgorithm int         `json:"randomAlgorithm"`
 	ProxyEnable     bool        `json:"proxyEnable"`
@@ -25,7 +25,7 @@ type completedConfig struct {
 	LocalPort       int         `json:"localPort"`
 }
 
-type Config struct {
+type config struct {
 	Enable        bool   `json:"enable"`
 	Password      string `json:"password"`
 	Method        string `json:"method"`
