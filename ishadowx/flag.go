@@ -25,7 +25,7 @@ func getPath() string {
 	} else if len(args) == 2 {
 		if isHelp(args[1]) {
 			fmt.Fprintf(os.Stdout, help, args[0], args[0], args[0])
-			os.Exit(0)
+			os.Exit(1)
 		}
 		path, err := filepath.Abs(args[1])
 		if err != nil {
