@@ -1,0 +1,3 @@
+package: test/ishadowx
+import:
+- package: github.com/gocolly/colly
