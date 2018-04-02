@@ -10,8 +10,17 @@ Download -- [https://golang.org/dl/](https://golang.org/dl/)
 
 ## Usage
 
+ll, ishadowx
+
 ```shell
 git clone https://github.com/lizebang/go-tools.git
 cd go-tools
 sh ./install-all.sh
+```
+
+go-tools
+
+```shell
+cd go-tools
+sh ./go-tools.sh
 ```
