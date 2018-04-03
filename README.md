@@ -18,9 +18,4 @@ cd go-tools
 sh ./install-all.sh
 ```
 
-go-tools
-
-```shell
-cd go-tools
-sh ./go-tools.sh
-```
+go-tools, v2ray
