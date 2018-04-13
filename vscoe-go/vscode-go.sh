@@ -1,8 +1,5 @@
 #!/bin/bash
 
-cd $GOPATH/bin
-rm gocode gopkgs go-outline go-symbols guru gorename godef godoc goreturns golint dlv
-
 go get -u -v github.com/nsf/gocode
 go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
 go get -u -v github.com/ramya-rao-a/go-outline
