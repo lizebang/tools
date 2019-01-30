@@ -11,8 +11,4 @@ Some good tools.
 * [Encode / Decode](https://github.com/willfarrell/alfred-encode-decode-workflow)
 * [gitignore](https://github.com/jdno/alfred-gitignore) -- [Download](http://www.packal.org/workflow/gitignore)
 * [number-coversion](https://github.com/oliverCJ/conversion-workflow) --- [Download](http://www.packal.org/workflow/jin-zhi-zhuan-huan)
-* [GitLab Search](https://github.com/lukewaite/alfred-gitlab) --- [Download](http://www.packal.org/workflow/gitlab)
-* [Visual Studio Code](https://github.com/alexchantastic/alfred-open-with-vscode-workflow) --- [Download](http://www.packal.org/workflow/visual-studio-code)
 * [Flush DNS](https://github.com/cdraeger/alfred2-flushdns-workflow) --- [Download](http://www.packal.org/workflow/flush-dns)
-* [Sourcegraph](https://github.com/sourcegraph/sourcegraph-alfred) --- [Download](http://www.packal.org/workflow/sourcegraph)
-* [cargo](https://github.com/mkamakura/alfred-cargo) --- [Download](http://www.packal.org/workflow/cargo)
