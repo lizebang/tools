@@ -12,3 +12,4 @@ Some good tools.
 * [gitignore](https://github.com/jdno/alfred-gitignore) -- [Download](http://www.packal.org/workflow/gitignore)
 * [number-coversion](https://github.com/oliverCJ/conversion-workflow) --- [Download](http://www.packal.org/workflow/jin-zhi-zhuan-huan)
 * [Flush DNS](https://github.com/cdraeger/alfred2-flushdns-workflow) --- [Download](http://www.packal.org/workflow/flush-dns)
+* [alfred-workflow-todoist](https://github.com/moranje/alfred-workflow-todoist) --- [Download](http://www.packal.org/workflow/alfred-workflow-todoist)
